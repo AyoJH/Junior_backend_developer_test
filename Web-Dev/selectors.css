@@ -1,0 +1,70 @@
+/*
+  Futurelearn CSS Exercise C2.6 
+*/
+
+/*
+  You're going to finish the styling for the restaurant website that we worked on before, by writing CSS. This is a slightly updated version of the code you wrote in a previous step. 
+
+  You've been left some instructions within the code. The instructions are like a puzzle: they each get a little harder, and each builds on the knowledge you have before, and from the course so far. You've should have a PDF from the Futurelearn site showing you what the final output should look like.
+
+  Some initial styles have been provided below. Scroll down to "START FOLLOWING INSTRUCTIONS HERE!", to find the rest of the instructions.
+
+*/
+
+body {
+  background: olive;
+}
+
+.sample-map {
+  width: 100%;
+  background: pink;
+  height: 200px;
+}
+
+.container {
+  background: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+figure {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+figure img {
+  width: 100%;
+}
+
+
+h1,h2,h3 {
+       text-align:center;
+	   }
+
+table{
+       margin:0 auto;
+}
+
+
+td {
+   padding:5px;
+}
+
+figcaption{
+
+    background: darkgreen;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    font-style: italic;   
+
+}
+
+
