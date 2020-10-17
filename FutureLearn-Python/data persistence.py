@@ -189,7 +189,7 @@ class Validator:
 ##company = clearbit.Company.find(domain='uber.com',stream=True)
 import clearbit
 
-## Auth
+## OAuth
 clearbit.key = 'sk_da14e16c2943eee59eddf40a42983144'
 
 class Clearbitscrapper:
@@ -360,8 +360,4 @@ while True:
 
         break         
 
-# print(records)
-
-for key, value in records.items():
-    print(f"{key}  : {value}\n")
-
+print(records)
