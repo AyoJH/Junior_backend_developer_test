@@ -51,22 +51,29 @@ class Validator:
         
         if self.email:
 
-
             for i in range(0, at_char):
+
                 if (self.email[i] >= 'a' and self.email[i] <= 'z' or self.email[i] >= 'A' and self.email[i] <= 'Z'):
+                    
                     counter += 1
 
-
                     if (counter > 0 and at_char > 0 and (dot_char - at_char) > 0 and (dot_char + 1) < email_length):
+                        
                         return self.email
+
                     else:
+
                         return
+
                 else:
+                    
                     return None
 
         else:
-            return None
             
+            return None
+
+
     def phone_check(self):
         """     
             Method takes < USER PHONE >.
@@ -89,7 +96,7 @@ class Validator:
                     cell_length = int(cell_length)
                     return self.phone
 
-# Except User phone is not integer catch error and return None
+                # Except User phone is not integer catch error and return None
                 except ValueError:
                     return
             
@@ -135,8 +142,11 @@ class Validator:
      
             """
         if self.domain:
+
             return self.domain
+
         else:
+
             return
 
     def notes_checker(self):
@@ -151,45 +161,9 @@ class Validator:
         else:
             return
 
-# Import statement
-        
-### def search_email()
-##
-### OAuth
-##clearbit.key = 'sk_da14e16c2943eee59eddf40a42983144'
-##
-##person_response = clearbit.Enrichment.find(email='getkeyfrom dict()', stream = True)
-##company_response = clearbit.Company.find(domain = 'getkeyfrom dict()', stream=True)
-##
-##    company = 
-##
-### Error Handling.
-##try:
-##
-##    if person_response and company_response
-##
-##        dict.update({'bio': person_response['person']['bio']})
-##        dict.update({'avatar':person_response['person']['avatar'])
-##        dict.update({'employment':person_response['person']['employment'])
-##        dict.update({'title':person_response['person']['title'])
-##
-##        dict.update({'category':company_response['category']})
-##        dict.update({'industry':company_response['category']['industry']})
-##        dict.update({'category':company_response['category']['description']})
-##        dict.update({'category':company_response['category']['tags']})
-##        dict.update({'category':company_response['category']['logo']})
-##        print(dict)
-##
-##    else:
-##        return
-##except:
-##    # handle error
-##
-######
-##company = clearbit.Company.find(domain='uber.com',stream=True)
 import clearbit
 
-## OAuth
+## Auth
 clearbit.key = 'sk_da14e16c2943eee59eddf40a42983144'
 
 class Clearbitscrapper:
@@ -242,8 +216,6 @@ class Clearbitscrapper:
 
 # Beginning of while loop.
 
-# rolling flag
-
 records = {}
 active = 0
 while True:        
@@ -288,6 +260,8 @@ while True:
             print('Enter "notes" to change notes')
 
             # Get the input for what user want to edit.
+
+            # TO DO: Let user choose when to stop editing.
 
             what_to_edit = input('What would you like to change?\n')
 
@@ -360,4 +334,8 @@ while True:
 
         break         
 
-print(records)
+# print(records)
+
+for key, value in records.items():
+    print(f"{key}  : {value}\n")
+
